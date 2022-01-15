@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeiros passos com DOM</title>
+    <style>
+        body {
+
+            background:rgb(74, 74, 150);
+            color: white;
+            font: normal 14pt arial;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>iniciando os estudos DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div name="p">Todos Bem?</div>
+
+       <script>
+       window.document.write('Ola, Mundo!') /n
+       window.document.write(window.document.characterSet) //aparecerá UTF-8 na tela (saída)
+       window.document.write(window.navigator.appName) //aparecerá nescape na tela (saída)
+       window.document.write(window.document.URL) // aparecerá a url na tela (saída)
+
+       var p1 = window.document.getElementsByName('p') //não funciona
+       var corpo = window.document.body
+       var p = window.document.getElementsByName('p')[0]
+       p.innerText = 'Ola! luciano'
+       p.style.color = 'black'
+       p.style.background = 'blue'
+       var d = window.document.getElementsByName('msg') [1]
+       d.innerText = 'ola!'
+
+       window.document.write('p1.innertext')
+       p1.style.color = 'blue'
+
+        //var corpo = window.document.body
+
+       /*var p1 = window.document.getElementById('p')
+       corpo.style.color = 'black' muda a cores dos caracteres
+       corpo.style.background = 'black' muda a cor de fundo
+       var d = window.document.getElementById('msg')
+       d.style.background = 'green'
+       d.innerText = 'estou aguardando' comando reduzido
+       window.document.getElementById('msg').innerText = 'ola!' longo*/
+
+
+    </script>
+</body>
+
+</html>

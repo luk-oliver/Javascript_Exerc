@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+         body{
+             background-color: rgb(104, 104, 175);
+         }
+         div#area {
+           font: normal 20pt arial;
+           background: rgb(5, 5, 105);
+           color: salmon;
+           width: 400px;
+           height: 400px;
+           line-height: 400px;
+           text-align: center;
+           
+
+    }
+
+    </style>
+</head>
+<body>
+    <div id="area">Interagem! Entre! Clique! Saia!
+        
+     </div> 
+    
+    <script>
+        var a = window.document.getElementById('area')
+        /*ao inves de fazer ( onclick = "clicar()" onmouseenter = "entrar" 
+    onmouseout = "sair") no html, faço no JavaScript com a função addEventiListener()*/
+        var i = document.getElementById('imagem')         
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('click', clicar)//este bloco de comando ficou melhor.
+        a.addEventListener('mouseout',sair)
+
+        function entrar(){
+             a.innerText = 'Bom Dia!!'
+             a.style.background = 'white'
+              
+        }
+        function clicar() {
+            a.innerText = 'Boa Tarde!!'
+            a.style.background = 'red'
+         }
+         
+         function sair() {
+             a.innerText = 'Boa Noite!!'
+             a.style.background = 'black'
+         }
+    </script>
+</body>
+
+
